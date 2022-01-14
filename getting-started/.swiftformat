@@ -1,0 +1,11 @@
+# format options
+--indent 2
+--commas inline
+
+--disable wrapMultilineStatementBraces
+
+# file options
+--exclude .build
+
+# Swift Version
+--swiftversion 5.0

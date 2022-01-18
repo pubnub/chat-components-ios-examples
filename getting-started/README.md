@@ -4,6 +4,8 @@
 
 <img src="/assets/getting-started-ios-app.png" alt="Getting Started app for iOS" style="width:300px"/> 
 
+## Prerequisites
+
 This application uses [PubNub Swift SDK](https://github.com/pubnub/swift) (>= 4.1.2) for chat components and [UIKit](https://developer.apple.com/documentation/uikit) as the UI Toolkit.
 
 To use the app, you need:

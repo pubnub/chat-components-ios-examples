@@ -2,7 +2,7 @@
 
 `getting-started` is a basic 1:1 chat application that features a message input field and a message list that pile up on the screen as you send messages.
 
-<img src="/assets/getting-started-ios-app.png" alt="Getting Started app for iOS" style="width:300px"/> 
+<img src="../assets/getting-started-ios-app.png" alt="Getting Started app for iOS" style="width:300px"/> 
 
 ## Prerequisites
 

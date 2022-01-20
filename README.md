@@ -11,7 +11,7 @@ You need these to get started:
 * [Xcode](https://developer.apple.com/xcode/) (>= Xcode 13)
 * [PubNub Keyset](https://dashboard.pubnub.com/)
 
-Clone this repository directly from GitHub by using the [Open in Xcode](https://github.blog/2017-06-05-clone-in-xcode/) button.
+Clone this project and open a given app in Xcode. If you're authenticated into Xcode with your GitHub account, you can also open the project directly from GitHub using the [Open in Xcode](https://github.blog/2017-06-05-clone-in-xcode/) button.
 
 ## Sample apps
 

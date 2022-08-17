@@ -23,3 +23,16 @@ The `telehealth-example` app showcases these PubNub Chat Components for iOS:
 
 * [MessageInput](https://www.pubnub.com/docs/chat/components/ios/ui-components-ios#messageinput)
 * [MessageList](https://www.pubnub.com/docs/chat/components/ios/ui-components-ios#messagelist)
+
+## Usernames
+
+### Patients
+
+* lukeyoung
+* saraflores
+
+### Doctors
+
+* suejones
+
+## Pasword is not needed

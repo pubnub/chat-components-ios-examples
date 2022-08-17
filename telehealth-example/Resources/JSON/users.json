@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Luke Young",
+    "custom": {
+      "title": "Product Engineer",
+      "username":"lukeyoung",
+      "painLevel":"3/10",
+      "queuePosition":"1"
+    },
+    "type": "patient",
+    "email": null,
+    "eTag": null,
+    "externalId": "lukeyoung",
+    "id": "601f9324",
+    "profileUrl": "https://randomuser.me/api/portraits/men/3.jpg",
+    "updated": null
+  },
+  {
+    "name": "Dr Sue Jones",
+    "custom": {
+      "title": "General Practitioner",
+      "username": "suejones",
+      "painLevel":"3/10",
+      "queuePosition":"0"
+    },
+    "type": "doctor",
+    "email": null,
+    "eTag": null,
+    "externalId": "suejones",
+    "id": "0948aa84",
+    "profileUrl": "https://randomuser.me/api/portraits/women/3.jpg",
+    "updated": null
+  },
+  {
+    "name": "Sara Flores",
+    "custom": {
+      "title": "VP, Sales",
+      "username":"saraflores",
+      "painLevel":"9/10",
+      "queuePosition":"2"
+    },
+    "type": "patient",
+    "email": null,
+    "eTag": null,
+    "externalId": "saraflores",
+    "id": "0222c484",
+    "profileUrl": "https://randomuser.me/api/portraits/men/2.jpg",
+    "updated": null
+  }
+]

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:telehealth-example/Telehealth.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:getting-started/getting-started.xcodeproj">
    </FileRef>
 </Workspace>

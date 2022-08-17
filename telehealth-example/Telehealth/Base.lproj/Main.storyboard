@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mX0-dp-GGi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="kBH-1r-oYP">
+            <objects>
+                <viewController id="yUQ-FL-FFB" customClass="LoginViewController" customModule="Telehealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yKP-32-dnT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4F-xr-aUX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginScreen.HealthHubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BKh-D6-21M">
+                                        <rect key="frame" x="0.0" y="89" width="414" height="69"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="69" id="6UC-rl-we3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co0-Yk-JM5">
+                                        <rect key="frame" x="24" y="228" width="366" height="28"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMm-KU-3DX">
+                                        <rect key="frame" x="24" y="288" width="366" height="20"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" name="LoginScreen.TextViewLabel.TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="lukeyoung" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MFa-bU-PJ6">
+                                        <rect key="frame" x="24" y="312" width="366" height="42"/>
+                                        <color key="backgroundColor" name="LoginScreen.TextView.BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="N7d-d8-QDE"/>
+                                        </constraints>
+                                        <color key="textColor" name="LoginScreen.TextView.TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="LoginScreen.UsernameThumbnail"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="yUQ-FL-FFB" id="7so-HA-cxu"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="no password is required" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5AN-Xx-6BY">
+                                        <rect key="frame" x="24" y="402" width="366" height="42"/>
+                                        <color key="backgroundColor" name="LoginScreen.TextView.BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="u2K-Q2-wtO"/>
+                                        </constraints>
+                                        <color key="textColor" name="LoginScreen.TextView.TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftViewImage" value="LoginScreen.PasswordThumbnail"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="yUQ-FL-FFB" id="pUT-Rh-KdI"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNm-LD-fOv">
+                                        <rect key="frame" x="24" y="378" width="366" height="20"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" name="LoginScreen.TextViewLabel.TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg6-De-ts7">
+                                        <rect key="frame" x="24" y="476" width="366" height="48"/>
+                                        <color key="backgroundColor" red="0.2901960784" green="0.69803921570000005" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Ot3-jk-Hzr"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                            <fontDescription key="titleFontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onLoginButtonTapped:" destination="yUQ-FL-FFB" eventType="touchUpInside" id="5ti-k5-P8P"/>
+                                        </connections>
+                                    </button>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tOf-Fp-nfb">
+                                        <rect key="frame" x="24" y="548" width="366" height="72"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginScreen.ErrorIcon" translatesAutoresizingMaskIntoConstraints="NO" id="1Vw-Ps-rd0">
+                                                <rect key="frame" x="0.0" y="24" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="FFw-eK-1k9"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Pkc-Qa-spr"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asY-Ng-4Qk">
+                                                <rect key="frame" x="36" y="15.5" width="330" height="41"/>
+                                                <gestureRecognizers/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="This username is not recognized, please check valid accounts on the">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.8666666666666667" green="0.21568627450980393" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Demo page">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.8666666666666667" green="0.21568627450980393" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="Poppins-SemiBold"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="WB8-9D-Nqt"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="61E-Jj-qSR" appends="YES" id="4r5-OC-8et"/>
+                                        </connections>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsz-sI-kjK">
+                                        <rect key="frame" x="0.0" y="741" width="414" height="111"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQo-lk-duy">
+                                                <rect key="frame" x="24" y="24" width="366" height="63"/>
+                                                <gestureRecognizers/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="This is a sample app that doesn’t require a password. A list of valid usernames can be found at">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Demo page">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.29019607843137252" green="0.69803921568627447" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="Poppins-SemiBold"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="LoginScreen.InfoView.BackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="mQo-lk-duy" secondAttribute="trailing" constant="24" id="1ld-xd-Z5v"/>
+                                            <constraint firstItem="mQo-lk-duy" firstAttribute="leading" secondItem="zsz-sI-kjK" secondAttribute="leading" constant="24" id="MPI-42-2TE"/>
+                                            <constraint firstItem="mQo-lk-duy" firstAttribute="top" secondItem="zsz-sI-kjK" secondAttribute="top" constant="24" id="VEW-NJ-zFB"/>
+                                            <constraint firstAttribute="height" constant="111" id="aBt-SS-3nV"/>
+                                            <constraint firstAttribute="bottom" secondItem="mQo-lk-duy" secondAttribute="bottom" constant="24" id="diK-06-gut"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3ld-0P-LZR" appends="YES" id="0pm-h5-5zf"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="LoginScreen.BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="BKh-D6-21M" firstAttribute="leading" secondItem="iwe-q8-Rs4" secondAttribute="leading" id="165-OZ-THP"/>
+                                    <constraint firstItem="Co0-Yk-JM5" firstAttribute="top" secondItem="BKh-D6-21M" secondAttribute="bottom" constant="70" id="1Gg-Hj-WRr"/>
+                                    <constraint firstItem="iwe-q8-Rs4" firstAttribute="trailing" secondItem="Co0-Yk-JM5" secondAttribute="trailing" constant="24" id="5eQ-Uc-FkG"/>
+                                    <constraint firstItem="5AN-Xx-6BY" firstAttribute="leading" secondItem="QNm-LD-fOv" secondAttribute="leading" id="60k-Ef-daD"/>
+                                    <constraint firstItem="MFa-bU-PJ6" firstAttribute="leading" secondItem="IMm-KU-3DX" secondAttribute="leading" id="9ne-Ie-8VT"/>
+                                    <constraint firstItem="IMm-KU-3DX" firstAttribute="trailing" secondItem="Co0-Yk-JM5" secondAttribute="trailing" id="EAZ-Oc-6ZQ"/>
+                                    <constraint firstItem="5AN-Xx-6BY" firstAttribute="trailing" secondItem="QNm-LD-fOv" secondAttribute="trailing" id="J4V-q5-2AU"/>
+                                    <constraint firstItem="vg6-De-ts7" firstAttribute="trailing" secondItem="5AN-Xx-6BY" secondAttribute="trailing" id="Jwv-fp-Dg5"/>
+                                    <constraint firstItem="QNm-LD-fOv" firstAttribute="trailing" secondItem="MFa-bU-PJ6" secondAttribute="trailing" id="LSZ-UP-NOw"/>
+                                    <constraint firstItem="BKh-D6-21M" firstAttribute="trailing" secondItem="iwe-q8-Rs4" secondAttribute="trailing" id="LkD-h0-Bby"/>
+                                    <constraint firstItem="khF-tC-nad" firstAttribute="bottom" secondItem="zsz-sI-kjK" secondAttribute="bottom" id="Qyz-ON-AuU"/>
+                                    <constraint firstItem="tOf-Fp-nfb" firstAttribute="leading" secondItem="vg6-De-ts7" secondAttribute="leading" id="RcC-Ef-yx7"/>
+                                    <constraint firstItem="5AN-Xx-6BY" firstAttribute="top" secondItem="QNm-LD-fOv" secondAttribute="bottom" constant="4" id="ReF-6L-Umx"/>
+                                    <constraint firstItem="vg6-De-ts7" firstAttribute="leading" secondItem="5AN-Xx-6BY" secondAttribute="leading" id="UHr-bW-YoT"/>
+                                    <constraint firstItem="vg6-De-ts7" firstAttribute="top" secondItem="5AN-Xx-6BY" secondAttribute="bottom" constant="32" id="XY9-5I-Ynf"/>
+                                    <constraint firstItem="MFa-bU-PJ6" firstAttribute="trailing" secondItem="IMm-KU-3DX" secondAttribute="trailing" id="Zrk-XM-F8q"/>
+                                    <constraint firstItem="tOf-Fp-nfb" firstAttribute="top" secondItem="vg6-De-ts7" secondAttribute="bottom" constant="24" id="bI4-K6-Dcj"/>
+                                    <constraint firstItem="QNm-LD-fOv" firstAttribute="top" secondItem="MFa-bU-PJ6" secondAttribute="bottom" constant="24" id="bhA-bX-Yfz"/>
+                                    <constraint firstItem="tOf-Fp-nfb" firstAttribute="trailing" secondItem="vg6-De-ts7" secondAttribute="trailing" id="bwQ-5W-eBb"/>
+                                    <constraint firstItem="zsz-sI-kjK" firstAttribute="leading" secondItem="khF-tC-nad" secondAttribute="leading" id="ezd-1U-M8c"/>
+                                    <constraint firstItem="BKh-D6-21M" firstAttribute="width" secondItem="khF-tC-nad" secondAttribute="width" id="gXI-Bb-Jyd"/>
+                                    <constraint firstItem="tOf-Fp-nfb" firstAttribute="bottom" secondItem="iwe-q8-Rs4" secondAttribute="bottom" constant="-183" id="h8h-Vn-TY1"/>
+                                    <constraint firstItem="IMm-KU-3DX" firstAttribute="top" secondItem="Co0-Yk-JM5" secondAttribute="bottom" constant="32" id="i2I-pl-P7X"/>
+                                    <constraint firstItem="zsz-sI-kjK" firstAttribute="trailing" secondItem="khF-tC-nad" secondAttribute="trailing" id="qfW-2a-RdZ"/>
+                                    <constraint firstItem="BKh-D6-21M" firstAttribute="top" secondItem="iwe-q8-Rs4" secondAttribute="top" constant="89" id="rhM-Np-6Re"/>
+                                    <constraint firstItem="QNm-LD-fOv" firstAttribute="leading" secondItem="MFa-bU-PJ6" secondAttribute="leading" id="rrf-zs-keR"/>
+                                    <constraint firstItem="MFa-bU-PJ6" firstAttribute="top" secondItem="IMm-KU-3DX" secondAttribute="bottom" constant="4" id="u85-W5-fpe"/>
+                                    <constraint firstItem="IMm-KU-3DX" firstAttribute="leading" secondItem="Co0-Yk-JM5" secondAttribute="leading" id="uKH-WY-ge0"/>
+                                    <constraint firstItem="Co0-Yk-JM5" firstAttribute="leading" secondItem="iwe-q8-Rs4" secondAttribute="leading" constant="24" id="vRF-vk-q7u"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="iwe-q8-Rs4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="khF-tC-nad"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="57R-hG-6wy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="m4F-xr-aUX" secondAttribute="bottom" id="1xn-Fd-SuH"/>
+                            <constraint firstItem="m4F-xr-aUX" firstAttribute="leading" secondItem="57R-hG-6wy" secondAttribute="leading" id="87g-W9-5We"/>
+                            <constraint firstItem="m4F-xr-aUX" firstAttribute="trailing" secondItem="57R-hG-6wy" secondAttribute="trailing" id="HWv-LQ-Ad5"/>
+                            <constraint firstItem="m4F-xr-aUX" firstAttribute="top" secondItem="yKP-32-dnT" secondAttribute="top" id="Nha-by-nsk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wi8-Ca-Byl"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="errorView" destination="tOf-Fp-nfb" id="DgC-Dc-wDk"/>
+                        <outlet property="infoLabel" destination="mQo-lk-duy" id="FOQ-Gz-BfJ"/>
+                        <outlet property="loginTextField" destination="MFa-bU-PJ6" id="Hse-T9-fag"/>
+                        <outlet property="passwordTextField" destination="5AN-Xx-6BY" id="9xw-I2-MUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Krc-gM-oce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="61E-Jj-qSR">
+                    <connections>
+                        <action selector="onInfoLabelTapped:" destination="yUQ-FL-FFB" id="gF7-f4-9r5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3ld-0P-LZR">
+                    <connections>
+                        <action selector="onInfoLabelTapped:" destination="yUQ-FL-FFB" id="Mx4-sa-GGZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="195.6521739130435" y="-99.107142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cLN-jg-KER">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mX0-dp-GGi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hau-DE-aZY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yUQ-FL-FFB" kind="relationship" relationship="rootViewController" id="ZwQ-bg-zxJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="que-zA-Nb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623" y="-99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LoginScreen.ErrorIcon" width="16" height="16"/>
+        <image name="LoginScreen.HealthHubLogo" width="134" height="69"/>
+        <image name="LoginScreen.PasswordThumbnail" width="15" height="15"/>
+        <image name="LoginScreen.UsernameThumbnail" width="14" height="15"/>
+        <namedColor name="LoginScreen.BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoginScreen.InfoView.BackgroundColor">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoginScreen.TextView.BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoginScreen.TextView.TextColor">
+            <color red="0.41999998688697815" green="0.44699999690055847" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoginScreen.TextViewLabel.TextColor">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

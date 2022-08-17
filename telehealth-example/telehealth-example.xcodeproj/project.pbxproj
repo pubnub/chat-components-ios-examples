@@ -68,7 +68,7 @@
 		3D850501289949960013B074 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		3D850502289949960013B074 /* memberships.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = memberships.json; sourceTree = "<group>"; };
 		3D8505062899522B0013B074 /* TelehealthChatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelehealthChatProvider.swift; sourceTree = "<group>"; };
-		3DB7A88A2897C0860093C1E8 /* Telehealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telehealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB7A88A2897C0860093C1E8 /* telehealth-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "telehealth-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB7A88D2897C0860093C1E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DB7A88F2897C0860093C1E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3DB7A8942897C0860093C1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		3DB7A88B2897C0860093C1E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DB7A88A2897C0860093C1E8 /* Telehealth.app */,
+				3DB7A88A2897C0860093C1E8 /* telehealth-example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,9 +272,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3DB7A8892897C0860093C1E8 /* Telehealth */ = {
+		3DB7A8892897C0860093C1E8 /* telehealth-example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DB7A89E2897C0870093C1E8 /* Build configuration list for PBXNativeTarget "Telehealth" */;
+			buildConfigurationList = 3DB7A89E2897C0870093C1E8 /* Build configuration list for PBXNativeTarget "telehealth-example" */;
 			buildPhases = (
 				3DB7A8862897C0860093C1E8 /* Sources */,
 				3DB7A8872897C0860093C1E8 /* Frameworks */,
@@ -284,13 +284,13 @@
 			);
 			dependencies = (
 			);
-			name = Telehealth;
+			name = "telehealth-example";
 			packageProductDependencies = (
 				3D8504FA2899495F0013B074 /* PubNubChat */,
 				3D8504FC2899495F0013B074 /* PubNubChatComponents */,
 			);
 			productName = Telehealth;
-			productReference = 3DB7A88A2897C0860093C1E8 /* Telehealth.app */;
+			productReference = 3DB7A88A2897C0860093C1E8 /* telehealth-example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -308,7 +308,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3DB7A8852897C0860093C1E8 /* Build configuration list for PBXProject "Telehealth" */;
+			buildConfigurationList = 3DB7A8852897C0860093C1E8 /* Build configuration list for PBXProject "telehealth-example" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -324,7 +324,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3DB7A8892897C0860093C1E8 /* Telehealth */,
+				3DB7A8892897C0860093C1E8 /* telehealth-example */,
 			);
 		};
 /* End PBXProject section */
@@ -542,7 +542,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pubnub.Telehealth;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pubnub.telehealth-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -569,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pubnub.Telehealth;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pubnub.telehealth-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -580,7 +580,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3DB7A8852897C0860093C1E8 /* Build configuration list for PBXProject "Telehealth" */ = {
+		3DB7A8852897C0860093C1E8 /* Build configuration list for PBXProject "telehealth-example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DB7A89C2897C0870093C1E8 /* Debug */,
@@ -589,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DB7A89E2897C0870093C1E8 /* Build configuration list for PBXNativeTarget "Telehealth" */ = {
+		3DB7A89E2897C0870093C1E8 /* Build configuration list for PBXNativeTarget "telehealth-example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DB7A89F2897C0870093C1E8 /* Debug */,

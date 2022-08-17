@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:telehealth-example/Telehealth.xcodeproj">
+      location = "group:/Users/maciej.adamczyk/Documents/repos/chat-components-ios-examples/telehealth-example/telehealth-example.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:getting-started/getting-started.xcodeproj">

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DB7A8892897C0860093C1E8"
-               BuildableName = "Telehealth.app"
-               BlueprintName = "Telehealth"
-               ReferencedContainer = "container:Telehealth.xcodeproj">
+               BuildableName = "telehealth-example.app"
+               BlueprintName = "telehealth-example"
+               ReferencedContainer = "container:telehealth-example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DB7A8892897C0860093C1E8"
-            BuildableName = "Telehealth.app"
-            BlueprintName = "Telehealth"
-            ReferencedContainer = "container:Telehealth.xcodeproj">
+            BuildableName = "telehealth-example.app"
+            BlueprintName = "telehealth-example"
+            ReferencedContainer = "container:telehealth-example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DB7A8892897C0860093C1E8"
-            BuildableName = "Telehealth.app"
-            BlueprintName = "Telehealth"
-            ReferencedContainer = "container:Telehealth.xcodeproj">
+            BuildableName = "telehealth-example.app"
+            BlueprintName = "telehealth-example"
+            ReferencedContainer = "container:telehealth-example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

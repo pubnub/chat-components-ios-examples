@@ -83,17 +83,6 @@ class LoginViewController: UIViewController {
       } catch {
           print(error)
       }
-
-      return
-//    if provider.hasDoctorRole {
-//      navigationController?.pushViewController(
-//        CustomSplitViewController(provider: provider),
-//        animated: true
-//      )
-//    } else {
-//      navigationController?.setNavigationBarHidden(false, animated: false)
-//      setUpMessageListForPatient(using: provider)
-//    }
   }
   
   @IBAction func onInfoLabelTapped(_ sender: UIGestureRecognizer) {

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Dr Sue Jones",
+    "profileUrl": "https://randomuser.me/api/portraits/men/1.jpg",
+    "description": "General Practitioner",
+    "eTag": null,
+    "id": "telehealth-0948aa84-0222c484",
+    "updated": null,
+    "type": "Virtual Examination Room",
+    "status": null
+  },
+  {
+    "name": "Dr Sue Jones",
+    "profileUrl": "https://randomuser.me/api/portraits/men/2.jpg",
+    "description": "General Practitioner",
+    "eTag": null,
+    "id": "telehealth-0948aa84-601f9324",
+    "updated": null,
+    "type": "Virtual Examination Room",
+    "status": null
+  }
+]

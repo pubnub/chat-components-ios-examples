@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D30F7AB289D1452004261E0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7AA289D1452004261E0 /* UIView.swift */; };
+		3D30F7B6289D36B6004261E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F7B5289D36B6004261E0 /* Colors.xcassets */; };
+		3D30F7BB28A1264D004261E0 /* ChannelListTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7BA28A1264D004261E0 /* ChannelListTheme.swift */; };
+		3D30F7BD28A12656004261E0 /* MessageInputTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7BC28A12656004261E0 /* MessageInputTheme.swift */; };
+		3D30F7BF28A1265E004261E0 /* MessageListTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7BE28A1265E004261E0 /* MessageListTheme.swift */; };
+		3D30F7C128A12683004261E0 /* ChannelListCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7C028A12683004261E0 /* ChannelListCollectionViewLayout.swift */; };
+		3D30F7C328A126DC004261E0 /* ChannelListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7C228A126DC004261E0 /* ChannelListItemCell.swift */; };
+		3D35BC6F28A3A41C00B5EAB3 /* CustomMessageListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35BC6E28A3A41C00B5EAB3 /* CustomMessageListItemCell.swift */; };
+		3D4D22C7289A77C500273BC4 /* TelehealthCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4D22C6289A77C500273BC4 /* TelehealthCustomData.swift */; };
+		3D65A63B289AA04E00EEE747 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D65A63A289AA04E00EEE747 /* CustomSplitViewController.swift */; };
+		3D8504F7289948CC0013B074 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8504F4289948CC0013B074 /* LoginViewController.swift */; };
+		3D8504F8289948CC0013B074 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8504F6289948CC0013B074 /* UITextField.swift */; };
+		3D8504FB2899495F0013B074 /* PubNubChat in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8504FA2899495F0013B074 /* PubNubChat */; };
+		3D8504FD2899495F0013B074 /* PubNubChatComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8504FC2899495F0013B074 /* PubNubChatComponents */; };
+		3D850503289949960013B074 /* channels.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D850500289949960013B074 /* channels.json */; };
+		3D850504289949960013B074 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D850501289949960013B074 /* users.json */; };
+		3D850505289949960013B074 /* memberships.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D850502289949960013B074 /* memberships.json */; };
+		3D8505072899522B0013B074 /* TelehealthChatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8505062899522B0013B074 /* TelehealthChatProvider.swift */; };
+		3DB7A88E2897C0860093C1E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB7A88D2897C0860093C1E8 /* AppDelegate.swift */; };
+		3DB7A8902897C0860093C1E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB7A88F2897C0860093C1E8 /* SceneDelegate.swift */; };
+		3DB7A8952897C0860093C1E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8932897C0860093C1E8 /* Main.storyboard */; };
+		3DB7A8972897C0870093C1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8962897C0870093C1E8 /* Assets.xcassets */; };
+		3DB7A89A2897C0870093C1E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8982897C0870093C1E8 /* LaunchScreen.storyboard */; };
+		3DB7A8BF2897C5F40093C1E8 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8AC2897C5F40093C1E8 /* Poppins-ExtraLight.ttf */; };
+		3DB7A8C02897C5F40093C1E8 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8AD2897C5F40093C1E8 /* Poppins-ThinItalic.ttf */; };
+		3DB7A8C12897C5F40093C1E8 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8AE2897C5F40093C1E8 /* Poppins-ExtraLightItalic.ttf */; };
+		3DB7A8C22897C5F40093C1E8 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8AF2897C5F40093C1E8 /* Poppins-BoldItalic.ttf */; };
+		3DB7A8C32897C5F40093C1E8 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B02897C5F40093C1E8 /* Poppins-Light.ttf */; };
+		3DB7A8C42897C5F40093C1E8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B12897C5F40093C1E8 /* Poppins-Medium.ttf */; };
+		3DB7A8C52897C5F40093C1E8 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B22897C5F40093C1E8 /* Poppins-SemiBoldItalic.ttf */; };
+		3DB7A8C62897C5F40093C1E8 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B32897C5F40093C1E8 /* Poppins-ExtraBoldItalic.ttf */; };
+		3DB7A8C72897C5F40093C1E8 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B42897C5F40093C1E8 /* Poppins-ExtraBold.ttf */; };
+		3DB7A8C82897C5F40093C1E8 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B52897C5F40093C1E8 /* Poppins-BlackItalic.ttf */; };
+		3DB7A8C92897C5F40093C1E8 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B62897C5F40093C1E8 /* OFL.txt */; };
+		3DB7A8CA2897C5F40093C1E8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B72897C5F40093C1E8 /* Poppins-Regular.ttf */; };
+		3DB7A8CB2897C5F40093C1E8 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B82897C5F40093C1E8 /* Poppins-LightItalic.ttf */; };
+		3DB7A8CC2897C5F40093C1E8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8B92897C5F40093C1E8 /* Poppins-Bold.ttf */; };
+		3DB7A8CD2897C5F40093C1E8 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8BA2897C5F40093C1E8 /* Poppins-Black.ttf */; };
+		3DB7A8CE2897C5F40093C1E8 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8BB2897C5F40093C1E8 /* Poppins-Thin.ttf */; };
+		3DB7A8CF2897C5F40093C1E8 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8BC2897C5F40093C1E8 /* Poppins-SemiBold.ttf */; };
+		3DB7A8D02897C5F40093C1E8 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8BD2897C5F40093C1E8 /* Poppins-Italic.ttf */; };
+		3DB7A8D12897C5F40093C1E8 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8BE2897C5F40093C1E8 /* Poppins-MediumItalic.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D30F7AA289D1452004261E0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		3D30F7B5289D36B6004261E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		3D30F7BA28A1264D004261E0 /* ChannelListTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListTheme.swift; sourceTree = "<group>"; };
+		3D30F7BC28A12656004261E0 /* MessageInputTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInputTheme.swift; sourceTree = "<group>"; };
+		3D30F7BE28A1265E004261E0 /* MessageListTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListTheme.swift; sourceTree = "<group>"; };
+		3D30F7C028A12683004261E0 /* ChannelListCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListCollectionViewLayout.swift; sourceTree = "<group>"; };
+		3D30F7C228A126DC004261E0 /* ChannelListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListItemCell.swift; sourceTree = "<group>"; };
+		3D35BC6E28A3A41C00B5EAB3 /* CustomMessageListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageListItemCell.swift; sourceTree = "<group>"; };
+		3D4D22C6289A77C500273BC4 /* TelehealthCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelehealthCustomData.swift; sourceTree = "<group>"; };
+		3D65A63A289AA04E00EEE747 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
+		3D8504F4289948CC0013B074 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3D8504F6289948CC0013B074 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		3D850500289949960013B074 /* channels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = channels.json; sourceTree = "<group>"; };
+		3D850501289949960013B074 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		3D850502289949960013B074 /* memberships.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = memberships.json; sourceTree = "<group>"; };
+		3D8505062899522B0013B074 /* TelehealthChatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelehealthChatProvider.swift; sourceTree = "<group>"; };
+		3DB7A88A2897C0860093C1E8 /* telehealth-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "telehealth-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB7A88D2897C0860093C1E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DB7A88F2897C0860093C1E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3DB7A8942897C0860093C1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DB7A8962897C0870093C1E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DB7A8992897C0870093C1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DB7A89B2897C0870093C1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB7A8AC2897C5F40093C1E8 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3DB7A8AD2897C5F40093C1E8 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		3DB7A8AE2897C5F40093C1E8 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		3DB7A8AF2897C5F40093C1E8 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3DB7A8B02897C5F40093C1E8 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		3DB7A8B12897C5F40093C1E8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		3DB7A8B22897C5F40093C1E8 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		3DB7A8B32897C5F40093C1E8 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		3DB7A8B42897C5F40093C1E8 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3DB7A8B52897C5F40093C1E8 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		3DB7A8B62897C5F40093C1E8 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		3DB7A8B72897C5F40093C1E8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		3DB7A8B82897C5F40093C1E8 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		3DB7A8B92897C5F40093C1E8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		3DB7A8BA2897C5F40093C1E8 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		3DB7A8BB2897C5F40093C1E8 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		3DB7A8BC2897C5F40093C1E8 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		3DB7A8BD2897C5F40093C1E8 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		3DB7A8BE2897C5F40093C1E8 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DB7A8872897C0860093C1E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D8504FD2899495F0013B074 /* PubNubChatComponents in Frameworks */,
+				3D8504FB2899495F0013B074 /* PubNubChat in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D30F7AC289D3115004261E0 /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7B728A1262E004261E0 /* ChannelList */,
+				3D30F7B828A1262E004261E0 /* MessageList */,
+				3D30F7B928A1262E004261E0 /* MessageInput */,
+			);
+			path = Theming;
+			sourceTree = "<group>";
+		};
+		3D30F7B728A1262E004261E0 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7BA28A1264D004261E0 /* ChannelListTheme.swift */,
+				3D30F7C228A126DC004261E0 /* ChannelListItemCell.swift */,
+				3D30F7C028A12683004261E0 /* ChannelListCollectionViewLayout.swift */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		3D30F7B828A1262E004261E0 /* MessageList */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7BE28A1265E004261E0 /* MessageListTheme.swift */,
+				3D35BC6E28A3A41C00B5EAB3 /* CustomMessageListItemCell.swift */,
+			);
+			path = MessageList;
+			sourceTree = "<group>";
+		};
+		3D30F7B928A1262E004261E0 /* MessageInput */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7BC28A12656004261E0 /* MessageInputTheme.swift */,
+			);
+			path = MessageInput;
+			sourceTree = "<group>";
+		};
+		3D65A639289AA03B00EEE747 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3D65A63A289AA04E00EEE747 /* CustomSplitViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		3D8504F3289948CC0013B074 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3D8504F4289948CC0013B074 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3D8504F5289948CC0013B074 /* UIKit+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D8504F6289948CC0013B074 /* UITextField.swift */,
+				3D30F7AA289D1452004261E0 /* UIView.swift */,
+			);
+			path = "UIKit+Extensions";
+			sourceTree = "<group>";
+		};
+		3D8504FE2899497A0013B074 /* PubNub */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7AC289D3115004261E0 /* Theming */,
+				3D4D22C6289A77C500273BC4 /* TelehealthCustomData.swift */,
+				3D8505062899522B0013B074 /* TelehealthChatProvider.swift */,
+			);
+			path = PubNub;
+			sourceTree = "<group>";
+		};
+		3D8504FF289949960013B074 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				3D850500289949960013B074 /* channels.json */,
+				3D850501289949960013B074 /* users.json */,
+				3D850502289949960013B074 /* memberships.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		3DB7A8812897C0860093C1E8 = {
+			isa = PBXGroup;
+			children = (
+				3DB7A8A92897C5F40093C1E8 /* Resources */,
+				3DB7A88C2897C0860093C1E8 /* Telehealth */,
+				3DB7A88B2897C0860093C1E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DB7A88B2897C0860093C1E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DB7A88A2897C0860093C1E8 /* telehealth-example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DB7A88C2897C0860093C1E8 /* Telehealth */ = {
+			isa = PBXGroup;
+			children = (
+				3D8504F3289948CC0013B074 /* Login */,
+				3D8504FE2899497A0013B074 /* PubNub */,
+				3D65A639289AA03B00EEE747 /* Chat */,
+				3D8504F5289948CC0013B074 /* UIKit+Extensions */,
+				3DB7A88D2897C0860093C1E8 /* AppDelegate.swift */,
+				3DB7A88F2897C0860093C1E8 /* SceneDelegate.swift */,
+				3DB7A8932897C0860093C1E8 /* Main.storyboard */,
+				3DB7A8982897C0870093C1E8 /* LaunchScreen.storyboard */,
+				3DB7A8962897C0870093C1E8 /* Assets.xcassets */,
+				3D30F7B5289D36B6004261E0 /* Colors.xcassets */,
+				3DB7A89B2897C0870093C1E8 /* Info.plist */,
+			);
+			path = Telehealth;
+			sourceTree = "<group>";
+		};
+		3DB7A8A92897C5F40093C1E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D8504FF289949960013B074 /* JSON */,
+				3DB7A8AA2897C5F40093C1E8 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3DB7A8AA2897C5F40093C1E8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3DB7A8AB2897C5F40093C1E8 /* Poppins */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3DB7A8AB2897C5F40093C1E8 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				3DB7A8B62897C5F40093C1E8 /* OFL.txt */,
+				3DB7A8AC2897C5F40093C1E8 /* Poppins-ExtraLight.ttf */,
+				3DB7A8AD2897C5F40093C1E8 /* Poppins-ThinItalic.ttf */,
+				3DB7A8AE2897C5F40093C1E8 /* Poppins-ExtraLightItalic.ttf */,
+				3DB7A8AF2897C5F40093C1E8 /* Poppins-BoldItalic.ttf */,
+				3DB7A8B02897C5F40093C1E8 /* Poppins-Light.ttf */,
+				3DB7A8B12897C5F40093C1E8 /* Poppins-Medium.ttf */,
+				3DB7A8B22897C5F40093C1E8 /* Poppins-SemiBoldItalic.ttf */,
+				3DB7A8B32897C5F40093C1E8 /* Poppins-ExtraBoldItalic.ttf */,
+				3DB7A8B42897C5F40093C1E8 /* Poppins-ExtraBold.ttf */,
+				3DB7A8B52897C5F40093C1E8 /* Poppins-BlackItalic.ttf */,
+				3DB7A8B72897C5F40093C1E8 /* Poppins-Regular.ttf */,
+				3DB7A8B82897C5F40093C1E8 /* Poppins-LightItalic.ttf */,
+				3DB7A8B92897C5F40093C1E8 /* Poppins-Bold.ttf */,
+				3DB7A8BA2897C5F40093C1E8 /* Poppins-Black.ttf */,
+				3DB7A8BB2897C5F40093C1E8 /* Poppins-Thin.ttf */,
+				3DB7A8BC2897C5F40093C1E8 /* Poppins-SemiBold.ttf */,
+				3DB7A8BD2897C5F40093C1E8 /* Poppins-Italic.ttf */,
+				3DB7A8BE2897C5F40093C1E8 /* Poppins-MediumItalic.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DB7A8892897C0860093C1E8 /* telehealth-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DB7A89E2897C0870093C1E8 /* Build configuration list for PBXNativeTarget "telehealth-example" */;
+			buildPhases = (
+				3DB7A8862897C0860093C1E8 /* Sources */,
+				3DB7A8872897C0860093C1E8 /* Frameworks */,
+				3DB7A8882897C0860093C1E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "telehealth-example";
+			packageProductDependencies = (
+				3D8504FA2899495F0013B074 /* PubNubChat */,
+				3D8504FC2899495F0013B074 /* PubNubChatComponents */,
+			);
+			productName = Telehealth;
+			productReference = 3DB7A88A2897C0860093C1E8 /* telehealth-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DB7A8822897C0860093C1E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3DB7A8892897C0860093C1E8 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3DB7A8852897C0860093C1E8 /* Build configuration list for PBXProject "telehealth-example" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DB7A8812897C0860093C1E8;
+			packageReferences = (
+				3D8504F92899495F0013B074 /* XCRemoteSwiftPackageReference "chat-components-ios" */,
+			);
+			productRefGroup = 3DB7A88B2897C0860093C1E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DB7A8892897C0860093C1E8 /* telehealth-example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DB7A8882897C0860093C1E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB7A8CE2897C5F40093C1E8 /* Poppins-Thin.ttf in Resources */,
+				3D850503289949960013B074 /* channels.json in Resources */,
+				3DB7A8D12897C5F40093C1E8 /* Poppins-MediumItalic.ttf in Resources */,
+				3DB7A8C92897C5F40093C1E8 /* OFL.txt in Resources */,
+				3DB7A8C12897C5F40093C1E8 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				3DB7A8C82897C5F40093C1E8 /* Poppins-BlackItalic.ttf in Resources */,
+				3DB7A8BF2897C5F40093C1E8 /* Poppins-ExtraLight.ttf in Resources */,
+				3DB7A8CF2897C5F40093C1E8 /* Poppins-SemiBold.ttf in Resources */,
+				3DB7A8C22897C5F40093C1E8 /* Poppins-BoldItalic.ttf in Resources */,
+				3D850505289949960013B074 /* memberships.json in Resources */,
+				3DB7A8C32897C5F40093C1E8 /* Poppins-Light.ttf in Resources */,
+				3DB7A8CD2897C5F40093C1E8 /* Poppins-Black.ttf in Resources */,
+				3DB7A8D02897C5F40093C1E8 /* Poppins-Italic.ttf in Resources */,
+				3D850504289949960013B074 /* users.json in Resources */,
+				3DB7A8C72897C5F40093C1E8 /* Poppins-ExtraBold.ttf in Resources */,
+				3D30F7B6289D36B6004261E0 /* Colors.xcassets in Resources */,
+				3DB7A8CB2897C5F40093C1E8 /* Poppins-LightItalic.ttf in Resources */,
+				3DB7A89A2897C0870093C1E8 /* LaunchScreen.storyboard in Resources */,
+				3DB7A8C52897C5F40093C1E8 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				3DB7A8CA2897C5F40093C1E8 /* Poppins-Regular.ttf in Resources */,
+				3DB7A8C62897C5F40093C1E8 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				3DB7A8CC2897C5F40093C1E8 /* Poppins-Bold.ttf in Resources */,
+				3DB7A8C02897C5F40093C1E8 /* Poppins-ThinItalic.ttf in Resources */,
+				3DB7A8C42897C5F40093C1E8 /* Poppins-Medium.ttf in Resources */,
+				3DB7A8972897C0870093C1E8 /* Assets.xcassets in Resources */,
+				3DB7A8952897C0860093C1E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DB7A8862897C0860093C1E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D30F7AB289D1452004261E0 /* UIView.swift in Sources */,
+				3D8504F7289948CC0013B074 /* LoginViewController.swift in Sources */,
+				3DB7A88E2897C0860093C1E8 /* AppDelegate.swift in Sources */,
+				3D30F7C328A126DC004261E0 /* ChannelListItemCell.swift in Sources */,
+				3D30F7C128A12683004261E0 /* ChannelListCollectionViewLayout.swift in Sources */,
+				3D4D22C7289A77C500273BC4 /* TelehealthCustomData.swift in Sources */,
+				3D30F7BD28A12656004261E0 /* MessageInputTheme.swift in Sources */,
+				3D65A63B289AA04E00EEE747 /* CustomSplitViewController.swift in Sources */,
+				3D30F7BB28A1264D004261E0 /* ChannelListTheme.swift in Sources */,
+				3D8505072899522B0013B074 /* TelehealthChatProvider.swift in Sources */,
+				3DB7A8902897C0860093C1E8 /* SceneDelegate.swift in Sources */,
+				3D35BC6F28A3A41C00B5EAB3 /* CustomMessageListItemCell.swift in Sources */,
+				3D8504F8289948CC0013B074 /* UITextField.swift in Sources */,
+				3D30F7BF28A1265E004261E0 /* MessageListTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3DB7A8932897C0860093C1E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DB7A8942897C0860093C1E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DB7A8982897C0870093C1E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DB7A8992897C0870093C1E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DB7A89C2897C0870093C1E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DB7A89D2897C0870093C1E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DB7A89F2897C0870093C1E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Telehealth/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pubnub.telehealth-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DB7A8A02897C0870093C1E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Telehealth/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pubnub.telehealth-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DB7A8852897C0860093C1E8 /* Build configuration list for PBXProject "telehealth-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB7A89C2897C0870093C1E8 /* Debug */,
+				3DB7A89D2897C0870093C1E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DB7A89E2897C0870093C1E8 /* Build configuration list for PBXNativeTarget "telehealth-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB7A89F2897C0870093C1E8 /* Debug */,
+				3DB7A8A02897C0870093C1E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D8504F92899495F0013B074 /* XCRemoteSwiftPackageReference "chat-components-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pubnub/chat-components-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D8504FA2899495F0013B074 /* PubNubChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D8504F92899495F0013B074 /* XCRemoteSwiftPackageReference "chat-components-ios" */;
+			productName = PubNubChat;
+		};
+		3D8504FC2899495F0013B074 /* PubNubChatComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D8504F92899495F0013B074 /* XCRemoteSwiftPackageReference "chat-components-ios" */;
+			productName = PubNubChatComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3DB7A8822897C0860093C1E8 /* Project object */;
+}

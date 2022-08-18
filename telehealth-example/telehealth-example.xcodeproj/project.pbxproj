@@ -16,7 +16,6 @@
 		3D30F7C328A126DC004261E0 /* ChannelListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7C228A126DC004261E0 /* ChannelListItemCell.swift */; };
 		3D35BC6F28A3A41C00B5EAB3 /* CustomMessageListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35BC6E28A3A41C00B5EAB3 /* CustomMessageListItemCell.swift */; };
 		3D4D22C7289A77C500273BC4 /* TelehealthCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4D22C6289A77C500273BC4 /* TelehealthCustomData.swift */; };
-		3D65A63B289AA04E00EEE747 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D65A63A289AA04E00EEE747 /* CustomSplitViewController.swift */; };
 		3D8504F7289948CC0013B074 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8504F4289948CC0013B074 /* LoginViewController.swift */; };
 		3D8504F8289948CC0013B074 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8504F6289948CC0013B074 /* UITextField.swift */; };
 		3D8504FB2899495F0013B074 /* PubNubChat in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8504FA2899495F0013B074 /* PubNubChat */; };
@@ -62,7 +61,6 @@
 		3D30F7C228A126DC004261E0 /* ChannelListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListItemCell.swift; sourceTree = "<group>"; };
 		3D35BC6E28A3A41C00B5EAB3 /* CustomMessageListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageListItemCell.swift; sourceTree = "<group>"; };
 		3D4D22C6289A77C500273BC4 /* TelehealthCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelehealthCustomData.swift; sourceTree = "<group>"; };
-		3D65A63A289AA04E00EEE747 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
 		3D8504F4289948CC0013B074 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3D8504F6289948CC0013B074 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		3D850500289949960013B074 /* channels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = channels.json; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 		3D65A639289AA03B00EEE747 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				3D65A63A289AA04E00EEE747 /* CustomSplitViewController.swift */,
 				84A4250528AE3267001986A8 /* ChatFlowCoordinator.swift */,
 			);
 			path = Chat;
@@ -381,7 +378,6 @@
 				3D4D22C7289A77C500273BC4 /* TelehealthCustomData.swift in Sources */,
 				84A4250628AE3267001986A8 /* ChatFlowCoordinator.swift in Sources */,
 				3D30F7BD28A12656004261E0 /* MessageInputTheme.swift in Sources */,
-				3D65A63B289AA04E00EEE747 /* CustomSplitViewController.swift in Sources */,
 				3D30F7BB28A1264D004261E0 /* ChannelListTheme.swift in Sources */,
 				3D8505072899522B0013B074 /* TelehealthChatProvider.swift in Sources */,
 				3DB7A8902897C0860093C1E8 /* SceneDelegate.swift in Sources */,

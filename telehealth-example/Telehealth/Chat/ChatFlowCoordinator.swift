@@ -88,11 +88,35 @@ private extension DefaultChatFlowCoordinator {
         channelListViewModel.leftBarButtonNavigationItems = nil
         channelListViewModel.layoutShouldContainSupplimentaryViews = false
         channelListViewModel.didSelectChannel = { [weak self] viewController, viewModel, selectedChannel in
-            
+            self?.setupMessageListViewController(for: selectedChannel)
         }
         channelListViewModel.customNavigationTitleView = { viewModel in
             UIView.customChannelListNavigationItemTitleView()
         }
         return channelListViewModel
+    }
+    
+    private func setupMessageListViewController<Custom: ChannelCustomData>(for channel: ChatChannel<Custom>) {
+        guard let messageListViewModel = try? provider.chatProvider.messageListComponentViewModel(pubnubChannelId: channel.id) else {
+            preconditionFailure("Cannot create message list for the channel ID: \(channel.id)")
+        }
+        
+        messageListViewModel.customNavigationTitleString = nil
+        messageListViewModel.rightBarButtonNavigationItems = nil
+        messageListViewModel.customNavigationTitleView = { [weak self] viewModel in
+            guard let name = channel.name, let self = self else { return UIView() }
+            return self.customMessageListNavigationTitleView(for: name)
+        }
+        
+        let messageListViewController = messageListViewModel.configuredComponentView()
+        navigationController.pushViewController(messageListViewController, animated: true)
+    }
+    
+    private func customMessageListNavigationTitleView(for name: String) -> UIView {
+        let label = UILabel()
+        label.text = name
+        label.font = UIFont(name: "Poppins-Bold", size: 16)
+        label.sizeToFit()
+        return label
     }
 }

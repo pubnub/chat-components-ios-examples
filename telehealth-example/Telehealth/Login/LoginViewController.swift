@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
   @IBOutlet private var errorView: UIView!
   
   private var provider: TelehealthChatProvider?
+  private var coordinator: ChatFlowCoordinator?
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     view.endEditing(true)
@@ -63,7 +64,6 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func onLoginButtonTapped(_ sender: UIButton) {
-        
     provider = TelehealthChatProvider(with: loginTextField.text ?? String(), completion: { [weak self] in
       self?.configureFinalViewController()
     })
@@ -72,52 +72,28 @@ class LoginViewController: UIViewController {
   }
   
   private func configureFinalViewController() {
-    
-    guard let provider = provider else {
+    guard let provider = provider, let navigationController = navigationController else {
+      print("encountered nil during configuration")
       return
     }
-    
-    if provider.hasDoctorRole {
-      navigationController?.pushViewController(
-        CustomSplitViewController(provider: provider),
-        animated: true
-      )
-    } else {
-      navigationController?.setNavigationBarHidden(false, animated: false)
-      setUpMessageListForPatient(using: provider)
-    }
-  }
-  
-  private func setUpMessageListForPatient(using provider: TelehealthChatProvider) {
-    
-    guard let currentUser = try? provider.chatProvider.fetchCurrentUser() else {
-      preconditionFailure("Cannot fetch current user")
-    }
-    guard let membership = currentUser.memberships.first(where: { $0.managedUser.id == provider.uuid }) else {
-      preconditionFailure("Cannot fetch membership for the current user")
-    }
-    guard let messageListViewModel = try? provider.chatProvider.messageListComponentViewModel(pubnubChannelId: membership.channelId) else {
-      preconditionFailure("Cannot create message list for the channel ID: \(membership.channelId)")
-    }
-    
-    messageListViewModel.customNavigationTitleString = nil
-    messageListViewModel.leftBarButtonNavigationItems = nil
-    messageListViewModel.rightBarButtonNavigationItems = nil
-    messageListViewModel.customNavigationTitleView = { viewModel in
-      UIView.customUserView(
-        with: membership.channel.name,
-        secondaryLabelText: membership.channel.details,
-        avatarURL: membership.channel.avatarURL,
-        backgroundColor: .clear,
-        primaryLabelTextColor: .white,
-        secondaryLabelTextColor: .white
-      )
-    }
-    
-    self.navigationController?.pushViewController(
-      messageListViewModel.configuredComponentView(),
-      animated: true
-    )
+      
+      do {
+          coordinator = DefaultChatFlowCoordinator(navigationController: navigationController, provider: provider)
+          try coordinator?.start()
+      } catch {
+          print(error)
+      }
+
+      return
+//    if provider.hasDoctorRole {
+//      navigationController?.pushViewController(
+//        CustomSplitViewController(provider: provider),
+//        animated: true
+//      )
+//    } else {
+//      navigationController?.setNavigationBarHidden(false, animated: false)
+//      setUpMessageListForPatient(using: provider)
+//    }
   }
   
   @IBAction func onInfoLabelTapped(_ sender: UIGestureRecognizer) {

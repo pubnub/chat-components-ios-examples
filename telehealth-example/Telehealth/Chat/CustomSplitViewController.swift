@@ -31,7 +31,6 @@ import PubNubChat
 import PubNubChatComponents
 
 class CustomSplitViewController: UIViewController {
-  
   private let provider: TelehealthChatProvider!
   
   private weak var channelList: CollectionViewComponent?
@@ -145,7 +144,6 @@ class CustomSplitViewController: UIViewController {
   }
   
   private func customMessageListNavigationTitleView<Custom: ChannelCustomData>(for channel: ChatChannel<Custom>) -> UIView {
-    
     let label = UILabel()
     label.text = channel.name
     label.font = UIFont(name: "Poppins-Bold", size: 16)

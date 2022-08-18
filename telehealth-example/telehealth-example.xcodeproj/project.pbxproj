@@ -49,6 +49,7 @@
 		3DB7A8CF2897C5F40093C1E8 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8BC2897C5F40093C1E8 /* Poppins-SemiBold.ttf */; };
 		3DB7A8D02897C5F40093C1E8 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8BD2897C5F40093C1E8 /* Poppins-Italic.ttf */; };
 		3DB7A8D12897C5F40093C1E8 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7A8BE2897C5F40093C1E8 /* Poppins-MediumItalic.ttf */; };
+		84A4250628AE3267001986A8 /* ChatFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4250528AE3267001986A8 /* ChatFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		3DB7A8BC2897C5F40093C1E8 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		3DB7A8BD2897C5F40093C1E8 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		3DB7A8BE2897C5F40093C1E8 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		84A4250528AE3267001986A8 /* ChatFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				3D65A63A289AA04E00EEE747 /* CustomSplitViewController.swift */,
+				84A4250528AE3267001986A8 /* ChatFlowCoordinator.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				3D30F7C328A126DC004261E0 /* ChannelListItemCell.swift in Sources */,
 				3D30F7C128A12683004261E0 /* ChannelListCollectionViewLayout.swift in Sources */,
 				3D4D22C7289A77C500273BC4 /* TelehealthCustomData.swift in Sources */,
+				84A4250628AE3267001986A8 /* ChatFlowCoordinator.swift in Sources */,
 				3D30F7BD28A12656004261E0 /* MessageInputTheme.swift in Sources */,
 				3D65A63B289AA04E00EEE747 /* CustomSplitViewController.swift in Sources */,
 				3D30F7BB28A1264D004261E0 /* ChannelListTheme.swift in Sources */,

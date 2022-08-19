@@ -8,7 +8,7 @@
 import UIKit
 import PubNubChatComponents
 
-class ChannelListCollectionViewLayout: UICollectionViewLayout, CollectionViewLayoutComponent {
+final class ChannelListCollectionViewLayout: UICollectionViewLayout, CollectionViewLayoutComponent {
   static func create(usingSupplimentaryItems: Bool) -> UICollectionViewLayout {
     
     let itemSize = NSCollectionLayoutSize(

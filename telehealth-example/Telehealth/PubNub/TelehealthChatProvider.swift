@@ -30,10 +30,10 @@ import PubNub
 import PubNubChat
 import PubNubChatComponents
 
-class TelehealthChatProvider {
+final class TelehealthChatProvider {
     
-  let PUBNUB_PUB_KEY = "pub-c-8aa2a3e0-4047-4e8c-b966-a8f9d27e3269"
-  let PUBNUB_SUB_KEY = "sub-c-5dfc52c0-b3e1-11ec-9e6b-d29fac035801"
+  let PUBNUB_PUB_KEY = "myPublishKey"
+  let PUBNUB_SUB_KEY = "myPublishKey"
   
   private(set) var uuid: String = String()
   private(set) var hasDoctorRole: Bool = false
@@ -120,7 +120,6 @@ class TelehealthChatProvider {
     provider.themeProvider.template.messageInputComponent = messageInputComponentTheme
 
     return provider
-    
   }()
     
   private func insertObjects(
@@ -129,7 +128,6 @@ class TelehealthChatProvider {
     memberships: [ChatMember<TelehealthCustomData>],
     completion: (() -> Void )? = nil
   ) {
-    
     chatProvider.pubnubProvider.subscribe(
       SubscribeRequest(
         channels: (channels.filter() { $0.id.contains(uuid) }).map() { $0.id },

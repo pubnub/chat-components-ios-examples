@@ -116,7 +116,6 @@ private extension DefaultChatFlowCoordinator {
         let label = UILabel()
         label.text = name
         label.font = UIFont(name: "Poppins-Bold", size: 16)
-        label.sizeToFit()
         return label
     }
 }

@@ -8,10 +8,8 @@
 import UIKit
 import PubNubChatComponents
 
-class ChannelListItemCell: ChannelMemberComponentCell {
-  
+final class ChannelListItemCell: ChannelMemberComponentCell {
   override func setupSubviews() {
-    
     super.setupSubviews()
     cellContainer.spacing = 11
     

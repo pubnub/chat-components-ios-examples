@@ -11,11 +11,9 @@ import PubNubChat
 import PubNubChatComponents
 
 let navigationBarAppearance: UINavigationBarAppearance = {
-  
   let appearance = UINavigationBarAppearance()
   appearance.configureWithDefaultBackground()
   appearance.backgroundColor = UIColor(named: "ChannelList.NavigationBar.BackgroundColor")!
-  
   return appearance
 }()
 

@@ -31,7 +31,9 @@ import PubNubChat
 import PubNubChatComponents
 
 final class TelehealthChatProvider {
-    
+        
+  // Please enter the subkey that you acquire from Admin Portal or from the tutorial here,
+  // and repeat this step for all your other devices used for this demo
   let PUBNUB_PUB_KEY = "myPublishKey"
   let PUBNUB_SUB_KEY = "myPublishKey"
   

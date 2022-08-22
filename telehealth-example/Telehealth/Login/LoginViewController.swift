@@ -77,12 +77,12 @@ class LoginViewController: UIViewController {
       return
     }
       
-      do {
-          coordinator = DefaultChatFlowCoordinator(navigationController: navigationController, provider: provider)
-          try coordinator?.start()
-      } catch {
-          print(error)
-      }
+    do {
+      coordinator = DefaultChatFlowCoordinator(navigationController: navigationController, provider: provider)
+      try coordinator?.start()
+    } catch {
+      print(error)
+    }
   }
   
   @IBAction func onInfoLabelTapped(_ sender: UIGestureRecognizer) {

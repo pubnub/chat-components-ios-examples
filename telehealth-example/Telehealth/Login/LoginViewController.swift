@@ -28,7 +28,7 @@
 import UIKit
 import PubNubChat
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
   
   @IBOutlet private var infoLabel: UILabel!
   @IBOutlet private var loginTextField: UITextField!

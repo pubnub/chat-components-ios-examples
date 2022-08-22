@@ -2,7 +2,7 @@
 //  ChatFlowCoordinator.swift
 //
 //  PubNub Real-time Cloud-Hosted Push API and Push Notification Client Frameworks
-//  Copyright © 2021 PubNub Inc.
+//  Copyright © 2022 PubNub Inc.
 //  https://www.pubnub.com/
 //  https://www.pubnub.com/terms
 //

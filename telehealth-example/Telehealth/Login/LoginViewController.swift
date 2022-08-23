@@ -86,9 +86,8 @@ final class LoginViewController: UIViewController {
   }
   
   @IBAction func onInfoLabelTapped(_ sender: UIGestureRecognizer) {
-    let url = URL(string: "https://www.google.pl")!
-    
-    if UIApplication.shared.canOpenURL(url) {
+    let link = "https://github.com/pubnub/chat-components-ios-examples/tree/master/telehealth-example#usernames"
+    if let url = URL(string: link), UIApplication.shared.canOpenURL(url) {
       UIApplication.shared.open(url)
     }
   }

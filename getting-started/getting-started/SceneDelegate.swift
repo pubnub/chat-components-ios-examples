@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     return PubNubConfiguration(
       publishKey: PUBNUB_PUBLISH_KEY,
       subscribeKey: PUBNUB_SUBSCRIBE_KEY,
-      uuid: "myFirstUser"
+      userId: "myFirstUser"
     )
   }()
   
@@ -90,7 +90,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     )
     
     // Creates a membership between the user and the channel for subscription purposes
-    let membership = PubNubChatMember(channel: channel, member: user)
+    let membership = PubNubChatMember(channel: channel, user: user)
     
     // Subscribes to the default channel
     chatProvider.pubnubProvider.subscribe(.init(channels: [defaultChannelId], withPresence: true))

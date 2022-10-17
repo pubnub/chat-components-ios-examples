@@ -15,7 +15,7 @@ To use the app, you need:
 
 ## Usage
 
-Read the [Getting Started](https://www.pubnub.com/docs/chat/components/ios/get-started) guide to learn how to use the app and better understand the logic behind it.
+Read the [Getting Started](https://www.pubnub.com/docs/chat/components/ios) guide to learn how to use the app and better understand the logic behind it.
 
 ## Features
 

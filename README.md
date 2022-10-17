@@ -20,11 +20,11 @@ Choose a sample application that demonstrates the use of chat components.
 | Name | Features | Chat type | Use case |
 |-----|---------|---------|---------|
 | [`getting-started`](getting-started/) | <br><ul><li>Message list and message input integration</li><li>Light & dark themes</li></ul></br> | 1:1 | <img src="/assets/getting-started-ios-app.png" alt="Getting Started app for iOS" style="width:300px"/> |
-| [`telehealth`](telehealth-example/) | <br><ul><li>Doctor to patient chat</li><li>Light & dark themes</li></ul></br> | 1:1 | <img src="/assets/telehealth-ios-app.png" alt="Telehealth sample application" style="width:300px"/> |
+| [`telehealth`](telehealth-example/) | <br><ul><li>Doctor-to-patient chat</li><li>Light & dark themes</li></ul></br> | 1:1 | <img src="/assets/telehealth-ios-app.png" alt="Telehealth sample application" style="width:300px"/> |
 
 
 ## Useful links
 
 For more information about PubNub Chat Components for iOS, refer to:
 * [GitHub repository](https://github.com/pubnub/chat-components-ios/blob/master/README.md)
-* [Documentation](https://www.pubnub.com/docs/chat/components/ios/get-started-ios)
+* [Documentation](https://www.pubnub.com/docs/chat/components/ios/get-started)

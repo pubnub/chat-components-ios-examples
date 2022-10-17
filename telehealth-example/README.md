@@ -1,6 +1,6 @@
 # Telehealth Application
 
-`telehealth-example` is a basic chat application that features communication between doctor and patient.
+`telehealth-example` is a basic chat application that features communication between a doctor and a patient.
 
 <img src="../assets/telehealth-ios-app.png" alt="Getting Started app for iOS" style="width:300px"/> 
 
@@ -15,16 +15,18 @@ To use the app, you need:
 
 ## Usage
 
-Read the [Getting Started](https://www.pubnub.com/docs/chat/components/ios/get-started-ios) guide to learn how to use the app and better understand the logic behind it.
+Read the [Getting Started](https://www.pubnub.com/docs/chat/components/ios/get-started) guide to learn how to use the app and better understand the logic behind it.
 
 ## Features
 
 The `telehealth-example` app showcases these PubNub Chat Components for iOS:
 
-* [MessageInput](https://www.pubnub.com/docs/chat/components/ios/ui-components-ios#messageinput)
-* [MessageList](https://www.pubnub.com/docs/chat/components/ios/ui-components-ios#messagelist)
+* [MessageInput](https://www.pubnub.com/docs/chat/components/ios/ui-components#messageinput)
+* [MessageList](https://www.pubnub.com/docs/chat/components/ios/ui-components#messagelist)
 
 ## Usernames
+
+You can log into the app either as a doctor or as one of the patients. Type in one of the available usernames and tap **Log in**. You don't need a password to log in.
 
 ### Patients
 
@@ -34,5 +36,3 @@ The `telehealth-example` app showcases these PubNub Chat Components for iOS:
 ### Doctors
 
 * suejones
-
-## Pasword is not needed

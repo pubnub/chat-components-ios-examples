@@ -11,8 +11,8 @@ import PubNub
 import PubNubChat
 import PubNubChatComponents
 
-let PUBNUB_PUBLISH_KEY = "pub-c-35fab00b-7a35-40cd-8ce7-5df60bef267c"
-let PUBNUB_SUBSCRIBE_KEY = "sub-c-2730f04f-18f5-4b27-9cbf-cb2dcf84c99c"
+let PUBNUB_PUBLISH_KEY = "myPublishKey"
+let PUBNUB_SUBSCRIBE_KEY = "myPublishKey"
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -26,7 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }()
   
   var window: UIWindow?
-
   var chatProvider: PubNubChatProvider?
   var defaultChannelId = "Default"
 
@@ -70,7 +69,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ]
 
     // Sets the component as the root view controller
-    
     let window = UIWindow(windowScene: windowScene)
     window.rootViewController = navigation
     self.window = window

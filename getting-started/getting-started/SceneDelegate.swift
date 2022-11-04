@@ -45,14 +45,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       // Preloads dummy data
       preloadData(provider) { [weak self] in
         self?.chatProvider = provider
-        self?.didPreloadData(windowScene: windowScene)
+        self?.setupRootView(windowScene: windowScene)
       }
     } else {
-      didPreloadData(windowScene: windowScene)
+      setupRootView(windowScene: windowScene)
     }
   }
   
-  func didPreloadData(windowScene: UIWindowScene) {
+  func setupRootView(windowScene: UIWindowScene) {
     // Creates the default ChannelList and MemberList component view models
     guard let channelListViewModel = chatProvider?.senderMembershipsChanneListComponentViewModel(),
           let messageListViewModel = try? chatProvider?.messageListComponentViewModel(pubnubChannelId: defaultChannelId) else {

@@ -26,14 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }()
   
   var window: UIWindow?
-
   var chatProvider: PubNubChatProvider?
   var defaultChannelId = "Default"
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
     guard let windowScene = (scene as? UIWindowScene) else { return }
-    let window = UIWindow(windowScene: windowScene)
 
     // Enables PubNub logging to the Console
     PubNub.log.levels = [.all]
@@ -46,12 +43,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       )
       
       // Preloads dummy data
-      preloadData(provider)
-      
-      // Assigns to SceneDelegate for future use
-      chatProvider = provider
+      preloadData(provider) { [weak self] in
+        self?.chatProvider = provider
+        self?.setupRootView(windowScene: windowScene)
+      }
+    } else {
+      setupRootView(windowScene: windowScene)
     }
-    
+  }
+  
+  func setupRootView(windowScene: UIWindowScene) {
     // Creates the default ChannelList and MemberList component view models
     guard let channelListViewModel = chatProvider?.senderMembershipsChanneListComponentViewModel(),
           let messageListViewModel = try? chatProvider?.messageListComponentViewModel(pubnubChannelId: defaultChannelId) else {
@@ -68,12 +69,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ]
 
     // Sets the component as the root view controller
+    let window = UIWindow(windowScene: windowScene)
     window.rootViewController = navigation
     self.window = window
     window.makeKeyAndVisible()
   }
   
-  func preloadData(_ chatProvider: PubNubChatProvider) {
+  func preloadData(_ chatProvider: PubNubChatProvider, completion: @escaping () -> Void) {
     // Creates a user object with uuid
     let user = PubNubChatUser(
       id: chatProvider.pubnubConfig.uuid,
@@ -96,7 +98,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     chatProvider.pubnubProvider.subscribe(.init(channels: [defaultChannelId], withPresence: true))
     
     // Fills the database with the user, channel, and memberships data
-    chatProvider.dataProvider.load(members: [membership])
+    chatProvider.dataProvider.load(members: [membership], completion: completion)
   }
 }
 

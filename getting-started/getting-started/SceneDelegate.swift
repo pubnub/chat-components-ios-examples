@@ -78,9 +78,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func preloadData(_ chatProvider: PubNubChatProvider, completion: @escaping () -> Void) {
     // Creates a user object with uuid
     let user = PubNubChatUser(
-      id: chatProvider.pubnubConfig.uuid,
+      id: chatProvider.pubnubConfig.userId,
       name: "myFirstUser",
-      avatarURL: URL(string: "https://picsum.photos/seed/\(chatProvider.pubnubConfig.uuid)/200")
+      avatarURL: URL(string: "https://picsum.photos/seed/\(chatProvider.pubnubConfig.userId)/200")
     )
     
     // Creates a channel object

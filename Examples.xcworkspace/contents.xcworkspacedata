@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:live-event-app/live-event-app.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:telehealth-example/telehealth-example.xcodeproj">
    </FileRef>
    <FileRef

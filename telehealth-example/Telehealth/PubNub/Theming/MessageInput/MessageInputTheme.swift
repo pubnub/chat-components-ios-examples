@@ -47,7 +47,6 @@ let messageInputComponentTheme = MessageInputComponentTheme(
     backgroundColor: UIColor(named: "MessageInput.TextView.BackgroundColor")!,
     textColor: UIColor(named: "MessageInput.TextView.TextColor")!,
     textFont: UIFont(name: "Poppins-Regular", size: 15)!,
-    usesStandardTextScaling: false,
     dataDetectorTypes: .all,
     linkTextAttributes: [:],
     isEditable: true,

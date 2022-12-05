@@ -38,7 +38,11 @@ let messageListCollectionViewTheme = CollectionViewComponentTheme(
   footerType: ReusableLabelViewComponent.self,
   backgroundColor: UIColor(named: "MessageList.BackgroundColor")!,
   scrollViewTheme: .init(isScrollEnabled: true, bounces: true, scrollsToTop: true),
-  refreshControlTheme: nil,
+  refreshControlTheme: RefreshControlTheme(
+    viewType: UIRefreshControl.self,
+    pullToRefreshTitle: nil,
+    pullToRefreshTintColor: UIColor(named: "MessageList.RefreshControl.TintColor")!
+  ),
   prefetchIndexThreshold: nil,
   isPrefetchingEnabled: false
 )
@@ -155,7 +159,7 @@ let messageListComponentTheme = MessageListComponentTheme(
     backgroundColor: .clear,
     highlightColor: .clear,
     selectedColor: .clear,
-    primaryContentColor: .clear,
+    primaryContentColor: UIColor(named: "MessageList.TypingIndicator.PrimaryContentColor")!,
     secondaryContentColor: .clear,
     animationEnabled: true,
     pulsing: true,

@@ -79,5 +79,5 @@ let messageInputComponentTheme = MessageInputComponentTheme(
   ),
   typingIndicatorService: .shared,
   publishTypingIndicator: true,
-  displayTypingIndicator: false
+  displayTypingIndicator: true
 )

@@ -24,22 +24,52 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+
+// YouTubeiOSPlayerHelper
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 import UIKit
+import YouTubeiOSPlayerHelper
 
 class LiveStreamViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
+       
+    let playerView = YTPlayerView()
+    playerView.delegate = self
+    playerView.translatesAutoresizingMaskIntoConstraints = false
     
-    let streamViewLabel = UILabel()
-    streamViewLabel.translatesAutoresizingMaskIntoConstraints = false
-    streamViewLabel.text = "Stream view"
-    streamViewLabel.textColor = .lightText
-    streamViewLabel.font = UIFont(name: "Poppins-Light", size: 18)
-    streamViewLabel.sizeToFit()
+    view.addSubview(playerView)
     
-    view.addSubview(streamViewLabel)
+    playerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    playerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+    playerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+    playerView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
     
-    streamViewLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-    streamViewLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    playerView.load(
+      withVideoId: "b42bhUfcLxc",
+      playerVars: ["playsinline": 1]
+    )
+  }
+}
+
+extension LiveStreamViewController: YTPlayerViewDelegate {
+  func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+    playerView.playVideo()
+  }
+  
+  func playerView(_ playerView: YTPlayerView, receivedError error: YTPlayerError) {
+    debugPrint("The player view received an error: \(error)")
   }
 }

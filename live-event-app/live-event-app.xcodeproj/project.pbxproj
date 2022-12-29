@@ -39,6 +39,7 @@
 		3DE7581D292B88020083EAB0 /* PubNubChat in Frameworks */ = {isa = PBXBuildFile; productRef = 3DE7581C292B88020083EAB0 /* PubNubChat */; };
 		3DE7581F292B88020083EAB0 /* PubNubChatComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3DE7581E292B88020083EAB0 /* PubNubChatComponents */; };
 		3DE75827292F723C0083EAB0 /* LiveEventAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE75826292F723C0083EAB0 /* LiveEventAppUITests.swift */; };
+		3DED7690295DA16B0048E272 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 3DED768F295DA16B0048E272 /* YouTubeiOSPlayerHelper */; };
 		3DFB1F9F2934B87500DDF361 /* TimeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB1F952934B87500DDF361 /* TimeLogger.swift */; };
 		3DFB1FA02934B87500DDF361 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB1F962934B87500DDF361 /* DebugViewController.swift */; };
 		3DFB1FA12934B87500DDF361 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB1F982934B87500DDF361 /* UIView+Extensions.swift */; };
@@ -110,6 +111,7 @@
 			files = (
 				3DE7581F292B88020083EAB0 /* PubNubChatComponents in Frameworks */,
 				3DE7581D292B88020083EAB0 /* PubNubChat in Frameworks */,
+				3DED7690295DA16B0048E272 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +279,7 @@
 			packageProductDependencies = (
 				3DE7581C292B88020083EAB0 /* PubNubChat */,
 				3DE7581E292B88020083EAB0 /* PubNubChatComponents */,
+				3DED768F295DA16B0048E272 /* YouTubeiOSPlayerHelper */,
 			);
 			productName = "live-event-app";
 			productReference = 3DE75804292B876C0083EAB0 /* live-event-app.app */;
@@ -330,6 +333,7 @@
 			mainGroup = 3DE757FB292B876C0083EAB0;
 			packageReferences = (
 				3DE7581B292B88020083EAB0 /* XCRemoteSwiftPackageReference "chat-components-ios" */,
+				3DED768E295DA16B0048E272 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = 3DE75805292B876C0083EAB0 /* Products */;
 			projectDirPath = "";
@@ -686,6 +690,14 @@
 				version = 0.2.0;
 			};
 		};
+		3DED768E295DA16B0048E272 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -698,6 +710,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DE7581B292B88020083EAB0 /* XCRemoteSwiftPackageReference "chat-components-ios" */;
 			productName = PubNubChatComponents;
+		};
+		3DED768F295DA16B0048E272 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DED768E295DA16B0048E272 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

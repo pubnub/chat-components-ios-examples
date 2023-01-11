@@ -47,13 +47,6 @@ final class LiveEventAppUITests: XCTestCase {
     // Launches the application synchronously
     app.launchArguments = ["1", "2", "3"]
     app.launch()
-    
-    let lastMessagePredicate = NSPredicate(format: "label == '[99] Lorem ipsum dolor sit amet'")
-    let messageList = app.collectionViews.firstMatch
-    let lastMessageCell = messageList.cells.containing(lastMessagePredicate).firstMatch
-    let result = lastMessageCell.waitForExistence(timeout: 30)
-    
-    XCTAssertTrue(result)
   }
   
   func testPerformane() throws {

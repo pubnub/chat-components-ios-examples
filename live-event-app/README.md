@@ -17,27 +17,19 @@ The purpose of this application is to simulate possible use cases that require i
 brew install npm
 ```
 
-1. Go to the `tomato` directory and execute the `npm install` command in the Terminal application
+1. In the Terminal application, go to the `tomato` directory and execute `npm install`
 
-2. Run the mock server by executing `npx tomato` 
+2. Run the mock server by executing `npx tomato` in the `tomato` directory
 
-3. See the [list of contracts](#contracts) below and their purposes
+3. See the [contracts list](https://github.com/pubnub/chat-specifications/tree/master/Contracts) with their names and purposes
 
-4. Load a contract in a separate Terminal window (from the same location) as follows (where `###` is a contract name you'd like to use):
+4. Download them locally and load the given contract in a separate Terminal window. The `###` placeholder is a contract name you'd like to use:
 
 ```
 curl -v 'http://localhost:8090/init?__contract__script__=###'
 ```
 
 5. Run the `live-event-app` target on any simulator
-
-## Contracts
-
-All contract files are stored in the `tomato/contracts` directory:
-
-| Name | Implementation | Use case | 
-|----- |--------- |---------- |
-| `loadTest` | `load-test-1.ts` | Simulates receiving thousands of messages from multiple users | 
 
 ## License
 

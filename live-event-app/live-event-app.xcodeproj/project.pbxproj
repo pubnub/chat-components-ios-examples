@@ -38,7 +38,6 @@
 		3DE75814292B876D0083EAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE75812292B876D0083EAB0 /* LaunchScreen.storyboard */; };
 		3DE7581D292B88020083EAB0 /* PubNubChat in Frameworks */ = {isa = PBXBuildFile; productRef = 3DE7581C292B88020083EAB0 /* PubNubChat */; };
 		3DE7581F292B88020083EAB0 /* PubNubChatComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3DE7581E292B88020083EAB0 /* PubNubChatComponents */; };
-		3DE75827292F723C0083EAB0 /* LiveEventAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE75826292F723C0083EAB0 /* LiveEventAppUITests.swift */; };
 		3DED7690295DA16B0048E272 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 3DED768F295DA16B0048E272 /* YouTubeiOSPlayerHelper */; };
 		3DFB1F9F2934B87500DDF361 /* TimeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB1F952934B87500DDF361 /* TimeLogger.swift */; };
 		3DFB1FA02934B87500DDF361 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB1F962934B87500DDF361 /* DebugViewController.swift */; };
@@ -93,7 +92,6 @@
 		3DE75813292B876D0083EAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DE75815292B876D0083EAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE75824292F723C0083EAB0 /* live-event-app-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "live-event-app-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DE75826292F723C0083EAB0 /* LiveEventAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventAppUITests.swift; sourceTree = "<group>"; };
 		3DFB1F952934B87500DDF361 /* TimeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLogger.swift; sourceTree = "<group>"; };
 		3DFB1F962934B87500DDF361 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		3DFB1F982934B87500DDF361 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				3DE75806292B876C0083EAB0 /* live-event-app */,
-				3DE75825292F723C0083EAB0 /* live-event-app-UITests */,
 				3DE75805292B876C0083EAB0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -211,14 +208,6 @@
 				3DE75815292B876D0083EAB0 /* Info.plist */,
 			);
 			path = "live-event-app";
-			sourceTree = "<group>";
-		};
-		3DE75825292F723C0083EAB0 /* live-event-app-UITests */ = {
-			isa = PBXGroup;
-			children = (
-				3DE75826292F723C0083EAB0 /* LiveEventAppUITests.swift */,
-			);
-			path = "live-event-app-UITests";
 			sourceTree = "<group>";
 		};
 		3DFB1F932934B87500DDF361 /* FPSDebug */ = {
@@ -411,7 +400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE75827292F723C0083EAB0 /* LiveEventAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

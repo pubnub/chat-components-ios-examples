@@ -29,14 +29,12 @@ import UIKit
 import PubNubChat
 import PubNubChatComponents
 
-class RootViewController: UIViewController {
-  
+final class RootViewController: UIViewController {
   private let provider: PubNubChatProvider
   private let channelId: String
-  
   private var portraitConstraints: [NSLayoutConstraint] = []
   private var landscapeConstraints: [NSLayoutConstraint] = []
-  private weak var scene: UIWindowScene?
+  private var scene: UIWindowScene
   
   init(
     channelId: String,
@@ -57,26 +55,39 @@ class RootViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    guard let scene = scene else {
-      return
-    }
-    // Creates the default MessageList component
     guard let messageListViewModel = try? provider.messageListComponentViewModel(pubnubChannelId: channelId) else {
-      preconditionFailure("Could not create intial view models")
-    }
-        
-    // Sets the custom title view for the MessageList component
-    messageListViewModel.customNavigationTitleString = nil
-    messageListViewModel.customNavigationTitleView = { [weak self] viewModel in
-      self?.getMessageListCustomTitleView() ?? UIView()
+      preconditionFailure("Missing required data. Make sure the channel object and current user are stored locally")
     }
     
-    // Creates MessageList and LiveStream view controllers
+    messageListViewModel.customNavigationTitleString = nil
+    messageListViewModel.customNavigationTitleView = { viewModel in
+      let customTitleView = UILabel()
+      customTitleView.font = UIFont(name: "Poppins-Bold", size: 14)
+      customTitleView.textColor = UIColor(named: "MessageList.NavigationBar.TitleTextColor")
+      customTitleView.text = "STREAM CHAT"
+      customTitleView.sizeToFit()
+      return customTitleView
+    }
+    
     let messageListViewController = messageListViewModel.configuredComponentView()
     let messageListContainerViewController = UINavigationController(rootViewController: messageListViewController)
     let streamViewController = LiveStreamViewController()
-            
-    // Combine the content from MessageList and LiveStream view controllers using a Container View Controller
+        
+    createContainerViewController(
+      messageListContainerViewController: messageListContainerViewController,
+      streamViewController: streamViewController
+    )
+    applyConstraints(
+      streamViewController: streamViewController,
+      messageListContainerViewController: messageListContainerViewController
+    )
+    setUpMetricsView()
+  }
+  
+  private func createContainerViewController(
+    messageListContainerViewController: UINavigationController,
+    streamViewController: UIViewController
+  ) {
     self.addChild(messageListContainerViewController)
     self.addChild(streamViewController)
     self.view.addSubview(messageListContainerViewController.view)
@@ -84,11 +95,15 @@ class RootViewController: UIViewController {
             
     messageListContainerViewController.didMove(toParent: self)
     streamViewController.didMove(toParent: self)
-        
+  }
+  
+  private func applyConstraints(
+    streamViewController: UIViewController,
+    messageListContainerViewController: UIViewController
+  ) {
     messageListContainerViewController.view.translatesAutoresizingMaskIntoConstraints = false
     streamViewController.view.translatesAutoresizingMaskIntoConstraints = false
-    
-    // Creates constraints for Portrait and Landscape orientations
+
     portraitConstraints = [
       messageListContainerViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       messageListContainerViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -99,13 +114,11 @@ class RootViewController: UIViewController {
       streamViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
       streamViewController.view.bottomAnchor.constraint(equalTo: messageListContainerViewController.view.topAnchor)
     ]
-    
     landscapeConstraints = [
       streamViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       streamViewController.view.trailingAnchor.constraint(equalTo: messageListContainerViewController.view.leadingAnchor),
       streamViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
       streamViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-      
       messageListContainerViewController.view.leadingAnchor.constraint(equalTo: streamViewController.view.trailingAnchor),
       messageListContainerViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       messageListContainerViewController.view.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 7.0 / 16.0),
@@ -113,7 +126,12 @@ class RootViewController: UIViewController {
       messageListContainerViewController.view.topAnchor.constraint(equalTo: view.topAnchor)
     ]
     
-    // Creates a debug overlay to display the FPS meter
+    NSLayoutConstraint.activate(
+      scene.interfaceOrientation.isPortrait ? portraitConstraints : landscapeConstraints
+    )
+  }
+  
+  private func setUpMetricsView() {
     let metricsView = MetricsView()
     view.addSubview(metricsView)
     view.bringSubviewToFront(metricsView)
@@ -122,22 +140,6 @@ class RootViewController: UIViewController {
       $0.topAnchor.constraint(equalTo: $1.topAnchor, constant: 40),
       $0.trailingAnchor.constraint(equalTo: $1.trailingAnchor, constant: -20)
     ]}
-        
-    // Activates a set of constraints depending on the orientation
-    NSLayoutConstraint.activate(
-      scene.interfaceOrientation.isPortrait ? portraitConstraints : landscapeConstraints
-    )
-  }
-  
-  private func getMessageListCustomTitleView() -> UIView {
-    
-    let customTitleView = UILabel()
-    customTitleView.font = UIFont(name: "Poppins-Bold", size: 14)
-    customTitleView.textColor = UIColor(named: "MessageList.NavigationBar.TitleTextColor")
-    customTitleView.text = "STREAM CHAT"
-    customTitleView.sizeToFit()
-    
-    return customTitleView
   }
   
   override func willTransition(
@@ -148,12 +150,9 @@ class RootViewController: UIViewController {
       to: newCollection,
       with: coordinator
     )
-    guard let scene = scene else {
-      return
-    }
     coordinator.animate { context in
-      NSLayoutConstraint.deactivate(scene.interfaceOrientation.isPortrait ? self.landscapeConstraints : self.portraitConstraints)
-      NSLayoutConstraint.activate(scene.interfaceOrientation.isPortrait ? self.portraitConstraints : self.landscapeConstraints)
+      NSLayoutConstraint.deactivate(self.scene.interfaceOrientation.isPortrait ? self.landscapeConstraints : self.portraitConstraints)
+      NSLayoutConstraint.activate(self.scene.interfaceOrientation.isPortrait ? self.portraitConstraints : self.landscapeConstraints)
     }
   }
 }

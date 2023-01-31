@@ -183,8 +183,7 @@ let messageListComponentTheme = MessageListComponentTheme(
   enableReactions: false
 )
 
-class CustomMessageListItemCell: MessageCollectionViewCellComponent {
-  
+final class CustomMessageListItemCell: MessageCollectionViewCellComponent {
   private var authorAvatarView: PubNubInlineAvatarComponentView!
   private var messageContentView: PubNubMessageContentTextView!
   
@@ -212,7 +211,7 @@ class CustomMessageListItemCell: MessageCollectionViewCellComponent {
     delegate = messageContentView
   }
   
-  open override func configure<Message: ManagedMessageViewModel>(
+  public override func configure<Message: ManagedMessageViewModel>(
     _ message: Message,
     theme: MessageListCellComponentTheme
   ) {

@@ -34,9 +34,7 @@ import PubNubChatComponents
 let PUBNUB_PUBLISH_KEY = "demo"
 let PUBNUB_SUBSCRIBE_KEY = "demo"
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-  
-  // Creates PubNub configuration
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   lazy var pubnubConfiguration = {
     return PubNubConfiguration(
       publishKey: PUBNUB_PUBLISH_KEY,
@@ -48,13 +46,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }()
   
   var window: UIWindow?
-  
   var chatProvider: PubNubChatProvider?
   var defaultChannelId = "demo"
   
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = (scene as? UIWindowScene) else {
-      return
+      preconditionFailure("Cannot cast to UIWindowScene")
     }
     
     let window = UIWindow(windowScene: windowScene)
@@ -64,33 +61,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // PubNub.log.writers = [ConsoleLogWriter()]
     
     if chatProvider == nil {
+      let provider = createChatProviderInstance()
+      let channelId = defaultChannelId
       
-      // Creates a new ChatProvider
-      let provider = PubNubChatProvider(
-        pubnubProvider: PubNub(configuration: pubnubConfiguration),
-        datastoreConfiguration: DatastoreConfiguration(
-          bundle: .pubnubChat,
-          dataModelFilename: "PubNubChatModel",
-          storageDirectlyURL: nil,
-          storageUniqueFilename: "default",
-          cleanStorageOnLoad: true
-        )
-      )
-      
-      // Sets custom themes for MessageList and MessageInput components
       provider.themeProvider.template.messageListComponent = messageListComponentTheme
       provider.themeProvider.template.messageInputComponent = messageInputComponentTheme
       
-      // Preloads dummy data
       preloadData(provider) { [weak self] in
-        window.rootViewController = RootViewController(channelId: self?.defaultChannelId ?? "", provider: provider, scene: windowScene)
+        window.rootViewController = RootViewController(channelId: channelId, provider: provider, scene: windowScene)
         self?.window = window
+        self?.chatProvider = provider
         window.makeKeyAndVisible()
       }
     }
   }
   
-  func preloadData(_ chatProvider: PubNubChatProvider, completion: @escaping (() -> Void)) {
+  private func createChatProviderInstance() -> PubNubChatProvider {
+    PubNubChatProvider(
+      pubnubProvider: PubNub(configuration: pubnubConfiguration),
+      datastoreConfiguration: DatastoreConfiguration(
+        bundle: .pubnubChat,
+        dataModelFilename: "PubNubChatModel",
+        storageDirectlyURL: nil,
+        storageUniqueFilename: "default",
+        cleanStorageOnLoad: true
+      )
+    )
+  }
+  
+  private func preloadData(_ chatProvider: PubNubChatProvider, completion: @escaping (() -> Void)) {
     let channel = PubNubChatChannel(
       id: defaultChannelId,
       name: "Default",
@@ -109,10 +108,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       user: user
     )
     
-    // Subscribes to the default channel
     chatProvider.pubnubProvider.subscribe(.init(channels: [defaultChannelId], withPresence: false))
-    
-    // Fills the database with the user, channel, and memberships data
     chatProvider.dataProvider.load(members: [membership], completion: completion)
   }
 }

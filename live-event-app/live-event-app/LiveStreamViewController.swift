@@ -42,25 +42,48 @@
 import UIKit
 import YouTubeiOSPlayerHelper
 
-class LiveStreamViewController: UIViewController {
+protocol LiveStreamPlayerView {
+  func loadVideo()
+  func play()
+}
+
+final class LiveStreamViewController: UIViewController {
+  private weak var playerView: (UIView & LiveStreamPlayerView)?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
        
-    let playerView = YTPlayerView()
-    playerView.delegate = self
+    let playerView = createPlayerView()
     playerView.translatesAutoresizingMaskIntoConstraints = false
-    
     view.addSubview(playerView)
+    self.playerView = playerView
     
-    playerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    playerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-    playerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-    playerView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+    NSLayoutConstraint.activate([
+      playerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      playerView.topAnchor.constraint(equalTo: view.topAnchor),
+      playerView.widthAnchor.constraint(equalTo: view.widthAnchor),
+      playerView.heightAnchor.constraint(equalTo: view.heightAnchor)
+    ])
     
-    playerView.load(
+    playerView.loadVideo()
+  }
+  
+  private func createPlayerView() -> UIView & LiveStreamPlayerView {
+    let youtubePlayerView = YTPlayerView()
+    youtubePlayerView.delegate = self
+    return youtubePlayerView
+  }
+}
+
+extension YTPlayerView: LiveStreamPlayerView {
+  public func loadVideo() {
+    load(
       withVideoId: "b42bhUfcLxc",
       playerVars: ["playsinline": 1]
     )
+  }
+  public func play() {
+    playVideo()
   }
 }
 

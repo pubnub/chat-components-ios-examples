@@ -15,11 +15,11 @@ To use the app, you need:
 
 ## Usage
 
-Read the [Getting Started](https://www.pubnub.com/docs/chat/components/ios) guide to learn how to use the app and better understand the logic behind it.
+Read the [Getting Started](https://www.pubnub.com/docs/chat/community-supported/ios) guide to learn how to use the app and better understand the logic behind it.
 
 ## Features
 
 The `getting-started` app showcases these PubNub Chat Components for iOS:
 
-* [MessageInput](https://www.pubnub.com/docs/chat/components/ios/ui-components#messageinput)
-* [MessageList](https://www.pubnub.com/docs/chat/components/ios/ui-components#messagelist)
+* [MessageInput](https://www.pubnub.com/docs/chat/community-supported/ios/ui-components#messageinput)
+* [MessageList](https://www.pubnub.com/docs/chat/community-supported/ios/ui-components#messagelist)

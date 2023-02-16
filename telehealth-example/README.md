@@ -21,8 +21,8 @@ Read the [tutorial](https://www.pubnub.com/tutorials/cross-platform-chat-applica
 
 The `telehealth-example` app showcases these PubNub Chat Components for iOS:
 
-* [MessageInput](https://www.pubnub.com/docs/chat/components/ios/ui-components#messageinput)
-* [MessageList](https://www.pubnub.com/docs/chat/components/ios/ui-components#messagelist)
+* [MessageInput](https://www.pubnub.com/docs/chat/community-supported/ios/ui-components#messageinput)
+* [MessageList](https://www.pubnub.com/docs/chat/community-supported/ios/ui-components#messagelist)
 
 ## Usernames
 
